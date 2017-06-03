@@ -19,7 +19,6 @@ class stack_list
 {
     public:
         node *push(node *, int);
-        node *pop(node *);
         void traverse(node *,int );
         void traverse2(node *,int );
         void traverse3(node *,int );
