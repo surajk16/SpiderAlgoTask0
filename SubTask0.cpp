@@ -57,7 +57,7 @@ void stack_list::traverse(node *top, int query)
 				{
 					f=1;
 					ptr->info-=query;
-					cout<<ptr->info<<endl;
+					if (ptr->info !=0) cout<<ptr->info<<endl;
 					ptr=ptr->link;
 					break;
 				}
@@ -65,14 +65,14 @@ void stack_list::traverse(node *top, int query)
 				
 			else
 				{
-					cout<<ptr->info<<endl;
+					if (ptr->info !=0) cout<<ptr->info<<endl;
 					ptr=ptr->link;
 				}
         }
         
         while (ptr!=NULL)
         	{
-        		cout<<ptr->info<<endl;
+        		if (ptr->info !=0) cout<<ptr->info<<endl;
         		ptr=ptr->link;
 			}
 			
@@ -119,13 +119,13 @@ void stack_list::traverse2(node *top, int query)
         		if (ptr->info >=query && (ptr->info)-query==diff)
         			{
         				ptr->info=diff;
-        				cout<<ptr->info<<endl;
+        				if (ptr->info !=0) cout<<ptr->info<<endl;
         				ptr=ptr->link;
 					}
 					
 				else
 					{
-						cout<<ptr->info<<endl;
+						if (ptr->info !=0) cout<<ptr->info<<endl;
 						ptr=ptr->link;
 					}
 			}
@@ -164,14 +164,14 @@ void stack_list::traverse3(node *top, int query)
         		if ( (ptr->info) == max && query<max)
         			{
         				f=1;
-						ptr->info-=query;
-        				cout<<ptr->info<<endl;
+					ptr->info-=query;
+        				if (ptr->info !=0) cout<<ptr->info<<endl;
         				ptr=ptr->link;
 					}
 					
 				else 
 					{
-						cout<<ptr->info<<endl;
+						if (ptr->info !=0) cout<<ptr->info<<endl;
 						ptr=ptr->link;
 					}
 					
